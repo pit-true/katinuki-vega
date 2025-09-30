@@ -7959,7 +7959,7 @@ function calculateMoveDamageRange(move, turnIndex = 0) {
     
     // 威力計算
     let movePower = move.power || 0;
-    if (move.class === 'pinch_up' || move.class === 'pinch_down') {
+    if (move.class === 'pinch_up' || move.class === 'pinch_down' || move.class === 'weight_based') {
         movePower = calculatePower(move);
     }
 
@@ -8154,7 +8154,7 @@ function calculateMoveDamageRangeWithItems(move, turnIndex = 0) {
     
     // 威力計算
     let movePower = move.power || 0;
-    if (move.class === 'pinch_up' || move.class === 'pinch_down') {
+    if (move.class === 'pinch_up' || move.class === 'pinch_down' || move.class === 'weight_based') {
         movePower = calculatePower(move);
     }
 
