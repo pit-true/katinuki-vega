@@ -5066,7 +5066,6 @@ function getDefenderWeight() {
         return 50.0; // デフォルト値
     }
     
-    console.log(`${defenderName}の重さ: ${pokemonData.weight}kg`);
     return pokemonData.weight;
 }
 
@@ -5327,6 +5326,7 @@ function calculateDamage(attack, defense, level, power, category, moveType, atta
   let finalAttack = attack;
   let finalDefense = defense;
   let finalPower = power;
+  
   
   // きしかいせい・じたばた
   if (currentMove && currentMove.class === "pinch_up"){
@@ -10104,11 +10104,17 @@ function displayUnifiedResults(minDamage, maxDamage, totalHP, isMultiTurn = fals
     const originalDefenderItem = defenderPokemon.item;
     defenderPokemon.item = null; // 防御側アイテムのみ除外
     
+    // 威力計算（weight_based技などに対応）
+    let displayPower = currentMove.power || 0;
+    if (currentMove.class === 'pinch_up' || currentMove.class === 'pinch_down' || currentMove.class === 'weight_based') {
+        displayPower = calculatePower(currentMove);
+    }
+    
     const [baseDisplayMin, baseDisplayMax] = calculateDamage(
         attackerOffensiveStat,
         defenderDefensiveStat,
         attackerPokemon.level,
-        currentMove.power || 0,
+        displayPower,
         currentMove.category,
         currentMove.type,
         attackerPokemon.types,
