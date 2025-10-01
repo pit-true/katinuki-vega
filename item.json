@@ -2,137 +2,137 @@
   {
     "name": "シルクのスカーフ", 
     "type": "ノーマル", 
-    "a": 1.1,
+    "a": 1.2,
     "timing": "attackMod",
-    "description": "ノーマルタイプの技の威力が1.1倍になる",
+    "description": "ノーマルタイプの技の威力が1.2倍になる",
     "romaji":"sirukunosuka-fu"
   },
   {
     "name": "しんぴのしずく", 
     "type": "みず", 
-    "c": 1.1,
+    "c": 1.2,
     "timing": "attackMod",
-    "description": "みずタイプの技の威力が1.1倍になる",
+    "description": "みずタイプの技の威力が1.2倍になる",
     "romaji":"sinpinosizuku"
   },
   {
     "name": "きせきのたね", 
     "type": "くさ", 
-    "c": 1.1,
+    "c": 1.2,
     "timing": "attackMod",
-    "description": "くさタイプの技の威力が1.1倍になる",
+    "description": "くさタイプの技の威力が1.2倍になる",
     "romaji":"kisekinotane"
   },
   {
     "name": "もくたん", 
     "type": "ほのお", 
-    "c": 1.1,
+    "c": 1.2,
     "timing": "attackMod",
-    "description": "ほのおタイプの技の威力が1.1倍になる",
+    "description": "ほのおタイプの技の威力が1.2倍になる",
     "romaji":"mokutan"
   },
   {
     "name": "じしゃく", 
     "type": "でんき", 
-    "c": 1.1,
+    "c": 1.2,
     "timing": "attackMod",
-    "description": "でんきタイプの技の威力が1.1倍になる",
+    "description": "でんきタイプの技の威力が1.2倍になる",
     "romaji":"jisyaku"
   },
   {
     "name": "とけないこおり", 
     "type": "こおり", 
-    "c": 1.1,
+    "c": 1.2,
     "timing": "attackMod",
-    "description": "こおりタイプの技の威力が1.1倍になる",
+    "description": "こおりタイプの技の威力が1.2倍になる",
     "romaji":"tokenaikoori"
   },
   {
     "name": "くろおび", 
     "type": "かくとう", 
-    "a": 1.1,
+    "a": 1.2,
     "timing": "attackMod",
-    "description": "かくとうタイプの技の威力が1.1倍になる",
+    "description": "かくとうタイプの技の威力が1.2倍になる",
     "romaji":"kuroobi"
   },
   {
     "name": "くろいメガネ", 
     "type": "あく", 
-    "a": 1.1,
+    "a": 1.2,
     "timing": "attackMod",
-    "description": "あくタイプの技の威力が1.1倍になる",
+    "description": "あくタイプの技の威力が1.2倍になる",
     "romaji":"kuroimegane"
   },
   {
     "name": "どくバリ", 
     "type": "どく", 
-    "a": 1.1,
+    "a": 1.2,
     "timing": "attackMod",
-    "description": "どくタイプの技の威力が1.1倍になる",
+    "description": "どくタイプの技の威力が1.2倍になる",
     "romaji":"dokubari"
   },
   {
     "name": "やわらかいすな", 
     "type": "じめん", 
-    "a": 1.1,
+    "a": 1.2,
     "timing": "attackMod",
-    "description": "じめんタイプの技の威力が1.1倍になる",
+    "description": "じめんタイプの技の威力が1.2倍になる",
     "romaji":"yawarakaisuna"
   },
   {
     "name": "するどいくちばし", 
     "type": "ひこう", 
-    "a": 1.1,
+    "a": 1.2,
     "timing": "attackMod",
-    "description": "ひこうタイプの技の威力が1.1倍になる",
+    "description": "ひこうタイプの技の威力が1.2倍になる",
     "romaji":"surudoikutibasi"
   },
   {
     "name": "まがったスプーン", 
     "type": "エスパー", 
-    "c": 1.1,
+    "c": 1.2,
     "timing": "attackMod",
-    "description": "エスパータイプの技の威力が1.1倍になる",
+    "description": "エスパータイプの技の威力が1.2倍になる",
     "romaji":"magattasupu-n"
   },
   {
     "name": "かたいいわ", 
     "type": "いわ", 
-    "a": 1.1,
+    "a": 1.2,
     "timing": "attackMod",
-    "description": "いわタイプの技の威力が1.1倍になる",
+    "description": "いわタイプの技の威力が1.2倍になる",
     "romaji":"kataiiwa"
   },
   {
     "name": "ぎんのこな", 
     "type": "むし", 
-    "a": 1.1,
+    "a": 1.2,
     "timing": "attackMod",
-    "description": "むしタイプの技の威力が1.1倍になる",
+    "description": "むしタイプの技の威力が1.2倍になる",
     "romaji":"ginnnokona"
   },
   {
     "name": "のろいのおふだ", 
     "type": "ゴースト", 
-    "a": 1.1,
+    "a": 1.2,
     "timing": "attackMod",
-    "description": "ゴーストタイプの技の威力が1.1倍になる",
+    "description": "ゴーストタイプの技の威力が1.2倍になる",
     "romaji":"noroinoofuda"
   },
   {
     "name": "りゅうのキバ", 
     "type": "ドラゴン", 
-    "c": 1.1,
+    "c": 1.2,
     "timing": "attackMod",
-    "description": "ドラゴンタイプの技の威力が1.1倍になる",
+    "description": "ドラゴンタイプの技の威力が1.2倍になる",
     "romaji":"ryuunokiba"
   },
   {
     "name": "メタルコート", 
     "type": "はがね", 
-    "a": 1.1,
+    "a": 1.2,
     "timing": "attackMod",
-    "description": "はがねタイプの技の威力が1.1倍になる",
+    "description": "はがねタイプの技の威力が1.2倍になる",
     "romaji":"metaruko-to"
   },
   {
