@@ -3732,35 +3732,39 @@ function updateStats(side) {
     // ★修正: 防御側のHP実数値が変更された場合の現在HP同期処理を強化
     if (side === 'defender') {
         setTimeout(() => {
-            const maxHPInput = document.getElementById('defenderRealHP');
             const currentHPInput = document.getElementById('defenderCurrentHP');
-            const detailMaxHPInput = document.getElementById('defenderDetailRealHP');
 
-            if (maxHPInput && currentHPInput) {
-                // メイン画面とdetail画面の両方からHP実数値を取得
-                let newMaxHP = stats.hp;
-                
-                // メイン画面の実数値入力欄から値を取得（優先）
-                if (maxHPInput.value && !isNaN(parseInt(maxHPInput.value))) {
-                    newMaxHP = parseInt(maxHPInput.value);
-                } else if (detailMaxHPInput && detailMaxHPInput.value && !isNaN(parseInt(detailMaxHPInput.value))) {
-                    newMaxHP = parseInt(detailMaxHPInput.value);
-                }
-                
+            if (currentHPInput && stats.hp) {
+                // 計算されたHP実数値を使用
+                const newMaxHP = stats.hp;
+
                 // 前回の最大HPを取得
                 const previousMaxHP = parseInt(currentHPInput.getAttribute('data-max-hp')) || 0;
                 const currentValue = parseInt(currentHPInput.value) || 0;
-                
+
                 // ★重要: HP実数値が変更された場合は必ず現在HPを同期
                 if (newMaxHP !== previousMaxHP || currentValue === 0 || currentValue > newMaxHP) {
                     currentHPInput.value = newMaxHP;
                 }
-                
+
                 // 新しい最大HPを記録し、制限を設定
                 currentHPInput.setAttribute('data-max-hp', newMaxHP);
                 currentHPInput.setAttribute('max', newMaxHP);
                 currentHPInput.setAttribute('min', 1);
-                
+
+                // モバイルスライダーの最大値も更新（現在HPがアクティブな場合のみ）
+                if (mobileControlState.isActive &&
+                    mobileControlState.activeInput === currentHPInput) {
+                    const mobileSlider = document.getElementById('mobileSlider');
+                    if (mobileSlider) {
+                        mobileSlider.setAttribute('max', newMaxHP);
+                        const mobileMaxLabel = document.getElementById('mobileMaxLabel');
+                        if (mobileMaxLabel) {
+                            mobileMaxLabel.textContent = newMaxHP;
+                        }
+                    }
+                }
+
                 // ポケモン名も記録（ポケモン変更検知用）
                 const currentPokemonName = defenderPokemon.name;
                 currentHPInput.setAttribute('data-pokemon-name', currentPokemonName);
@@ -4223,13 +4227,26 @@ class RealStatInputManager {
         if (!pokemon.baseStats[stat] || pokemon.baseStats[stat] === 0) {
             return; // ポケモンが選択されていない場合は何もしない
         }
-        
+
         const limits = calculateStatLimits(pokemon.baseStats[stat], pokemon.level, stat === 'hp');
-        
+
+        // HPの場合は、現在の実数値をmaxに設定
+        if (stat === 'hp') {
+            const currentHPValue = calculateStatWithParams(
+                pokemon.baseStats[stat],
+                pokemon.level,
+                pokemon.ivValues[stat],
+                pokemon.evValues[stat],
+                1.0, // HPに性格補正なし
+                true // isHP
+            );
+            limits.max = currentHPValue;
+        }
+
         // メイン入力欄
         const mainId = `${side}Real${stat.toUpperCase()}`;
         this.setInputLimits(mainId, limits);
-        
+
         // 詳細入力欄
         const detailId = `${side}DetailReal${stat.toUpperCase()}`;
         this.setInputLimits(detailId, limits);
@@ -5641,8 +5658,8 @@ function calculateDamage(attack, defense, level, power, category, moveType, atta
   // 天候補正
   const weather = document.getElementById('weatherSelect').value;
   if (weather === 'rain' && moveType === 'みず') {
-   // あめがふりつづいている 水2倍
-   proc = Math.floor(proc * 2);
+   // あめがふりつづいている 水1.5倍
+   proc = Math.floor(proc * 3 / 2);
   } else if (weather === 'rain' && moveType === 'ほのお') {
    // あめがふりつづいている 炎半減
    proc = Math.floor(proc / 2);
@@ -5650,8 +5667,8 @@ function calculateDamage(attack, defense, level, power, category, moveType, atta
    // あめがふりつづいている ソーラービーム半減
    proc = Math.floor(proc / 2);
   } else if (weather === 'sunny' && moveType === 'ほのお') {
-   // ひざしがつよい 炎2倍
-   proc = Math.floor(proc * 2);
+   // ひざしがつよい 炎1.5倍
+   proc = Math.floor(proc * 3 / 2);
   } else if (weather === 'sunny' && moveType === 'みず') {
    // ひざしがつよい 水半減
    proc = Math.floor(proc / 2);
@@ -11780,7 +11797,7 @@ function activateMobileControl(input) {
     
     // フィールド情報を取得
     const fieldInfo = getFieldInfo(input);
-    
+
     // 状態を更新
     mobileControlState.activeInput = input;
     mobileControlState.fieldInfo = fieldInfo;
@@ -11934,17 +11951,31 @@ function getFieldInfo(input) {
     }
     
     // 入力欄のタイプを判定
-    if (id.includes('Real')) {
+    if (id.includes('Level') || id === 'attackerLevel' || id === 'defenderLevel') {
+        // レベル
+        type = 'level';
+        min = 1;
+        max = 100;
+        step = 1;
+        displayName = `${side}レベル`;
+    } else if (id.includes('CurrentHP') || id === 'defenderCurrentHP') {
+        // 現在HP
+        type = 'currentHP';
+        min = parseInt(input.getAttribute('min')) || 1;
+        max = parseInt(input.getAttribute('max')) || 999;
+        step = 1;
+        displayName = '現在HP';
+    } else if (id.includes('Real')) {
         type = 'real';
         // 実数値の場合は、ポケモンデータから制限を取得
         min = parseInt(input.getAttribute('min')) || 1;
         max = parseInt(input.getAttribute('max')) || 999;
-        
+
         // min/maxが設定されていない場合、ポケモンデータから計算（性格補正を考慮）
         if ((min === 1 && max === 999) || !min || !max) {
             const pokemon = side === '攻撃側' ? attackerPokemon : defenderPokemon;
             const statKey = stat.toLowerCase();
-            
+
             if (pokemon && pokemon.baseStats && pokemon.baseStats[statKey]) {
                 const isHP = statKey === 'h' || statKey === 'hp';
                 const natureMod = isHP ? 1.0 : (pokemon.natureModifiers[statKey] || 1.0);
@@ -12037,7 +12068,7 @@ function adjustMobileValue(direction) {
     }
     
     const newValue = Math.max(fieldInfo.min, Math.min(fieldInfo.max, currentValue + (direction * step)));
-    
+
     if (newValue !== currentValue) {
         // 値を更新
         if (input.updateValueSilently) {
@@ -12067,8 +12098,16 @@ function adjustMobileValue(direction) {
             const side = fieldInfo.side === '攻撃側' ? 'attacker' : 'defender';
             const stat = fieldInfo.stat.toLowerCase();
             updateEVValueWithDirection(side, stat, currentValue, newValue, direction);
+        } else if (fieldInfo.type === 'level') {
+            // レベルの処理
+            const side = fieldInfo.side === '攻撃側' ? 'attacker' : 'defender';
+            const pokemon = side === 'attacker' ? attackerPokemon : defenderPokemon;
+            pokemon.level = newValue;
+            updateStats(side);
+        } else if (fieldInfo.type === 'currentHP') {
+            // 現在HPの処理（特に追加処理は不要）
         }
-        
+
         // 表示を更新
         updateMobileControlBar();
         
@@ -12200,12 +12239,18 @@ function updateEVValueWithDirection(side, stat, currentValue, targetValue, direc
  */
 function updateValueFromSlider() {
     if (!mobileControlState.isActive || !mobileControlState.activeInput) return;
-    
+
     const slider = document.getElementById('mobileSlider');
     const input = mobileControlState.activeInput;
     let newValue = parseInt(slider.value);
     const currentValue = parseInt(input.value) || 0;
-    
+
+    // fieldInfoのmin/maxで値を制限
+    const fieldInfo = mobileControlState.fieldInfo;
+    if (fieldInfo && fieldInfo.min !== undefined && fieldInfo.max !== undefined) {
+        newValue = Math.max(fieldInfo.min, Math.min(fieldInfo.max, newValue));
+    }
+
     // 値が変更された場合のみ処理
     if (newValue === currentValue) return;
     
@@ -12217,15 +12262,25 @@ function updateValueFromSlider() {
         updateEVValueWithDirection(side, stat, currentValue, newValue, direction);
         return; // 専用処理なので早期リターン
     }
-    
+
     // 実数値入力欄の場合は既存のスピンボタン機能を再現
     if (mobileControlState.fieldInfo.type === 'real') {
         handleRealStatChangeFromMobile(input, newValue, newValue > currentValue ? 1 : -1);
+    } else if (mobileControlState.fieldInfo.type === 'level') {
+        // レベルの処理
+        const side = mobileControlState.fieldInfo.side === '攻撃側' ? 'attacker' : 'defender';
+        const pokemon = side === 'attacker' ? attackerPokemon : defenderPokemon;
+        pokemon.level = newValue;
+        input.value = newValue;
+        updateStats(side);
+    } else if (mobileControlState.fieldInfo.type === 'currentHP') {
+        // 現在HPの処理
+        input.value = newValue;
     } else {
         // 個体値・努力値の場合は直接設定
         setValueAndTriggerEvents(input, newValue);
     }
-    
+
     // 現在値表示を更新
     document.getElementById('mobileCurrentValue').textContent = newValue;
 }
