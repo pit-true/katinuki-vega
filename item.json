@@ -1,233 +1,249 @@
 [
   {
-    "name": "シルクのスカーフ", 
-    "type": "ノーマル", 
-    "a": 1.2,
-    "timing": "attackMod",
-    "description": "ノーマルタイプの技の威力が1.2倍になる",
-    "romaji":"sirukunosuka-fu"
-  },
-  {
-    "name": "しんぴのしずく", 
-    "type": "みず", 
+    "name": "うしおのおこう",
+    "type": "みず",
     "c": 1.2,
     "timing": "attackMod",
-    "description": "みずタイプの技の威力が1.2倍になる",
-    "romaji":"sinpinosizuku"
+    "description": "みずタイプの技の威力が1.1倍になる",
+    "romaji": "sinpinosizuku"
   },
   {
-    "name": "きせきのたね", 
-    "type": "くさ", 
+    "name": "かたいいわ",
+    "type": "いわ",
+    "a": 1.2,
+    "timing": "attackMod",
+    "description": "いわタイプの技の威力が1.1倍になる",
+    "romaji": "kataiiwa"
+  },
+  {
+    "name": "きせきのたね",
+    "type": "くさ",
     "c": 1.2,
     "timing": "attackMod",
-    "description": "くさタイプの技の威力が1.2倍になる",
-    "romaji":"kisekinotane"
+    "description": "くさタイプの技の威力が1.1倍になる",
+    "romaji": "kisekinotane"
   },
   {
-    "name": "もくたん", 
-    "type": "ほのお", 
+    "name": "ぎんのこな",
+    "type": "むし",
+    "a": 1.2,
+    "timing": "attackMod",
+    "description": "むしタイプの技の威力が1.1倍になる",
+    "romaji": "ginnnokona"
+  },
+  {
+    "name": "くろいメガネ",
+    "type": "あく",
+    "a": 1.2,
+    "timing": "attackMod",
+    "description": "あくタイプの技の威力が1.1倍になる",
+    "romaji": "kuroimegane"
+  },
+  {
+    "name": "くろおび",
+    "type": "かくとう",
+    "a": 1.2,
+    "timing": "attackMod",
+    "description": "かくとうタイプの技の威力が1.1倍になる",
+    "romaji": "kuroobi"
+  },
+  {
+    "name": "こころのしずく",
     "c": 1.2,
-    "timing": "attackMod",
-    "description": "ほのおタイプの技の威力が1.2倍になる",
-    "romaji":"mokutan"
-  },
-  {
-    "name": "じしゃく", 
-    "type": "でんき", 
-    "c": 1.2,
-    "timing": "attackMod",
-    "description": "でんきタイプの技の威力が1.2倍になる",
-    "romaji":"jisyaku"
-  },
-  {
-    "name": "とけないこおり", 
-    "type": "こおり", 
-    "c": 1.2,
-    "timing": "attackMod",
-    "description": "こおりタイプの技の威力が1.2倍になる",
-    "romaji":"tokenaikoori"
-  },
-  {
-    "name": "くろおび", 
-    "type": "かくとう", 
-    "a": 1.2,
-    "timing": "attackMod",
-    "description": "かくとうタイプの技の威力が1.2倍になる",
-    "romaji":"kuroobi"
-  },
-  {
-    "name": "くろいメガネ", 
-    "type": "あく", 
-    "a": 1.2,
-    "timing": "attackMod",
-    "description": "あくタイプの技の威力が1.2倍になる",
-    "romaji":"kuroimegane"
-  },
-  {
-    "name": "どくバリ", 
-    "type": "どく", 
-    "a": 1.2,
-    "timing": "attackMod",
-    "description": "どくタイプの技の威力が1.2倍になる",
-    "romaji":"dokubari"
-  },
-  {
-    "name": "やわらかいすな", 
-    "type": "じめん", 
-    "a": 1.2,
-    "timing": "attackMod",
-    "description": "じめんタイプの技の威力が1.2倍になる",
-    "romaji":"yawarakaisuna"
-  },
-  {
-    "name": "するどいくちばし", 
-    "type": "ひこう", 
-    "a": 1.2,
-    "timing": "attackMod",
-    "description": "ひこうタイプの技の威力が1.2倍になる",
-    "romaji":"surudoikutibasi"
-  },
-  {
-    "name": "まがったスプーン", 
-    "type": "エスパー", 
-    "c": 1.2,
-    "timing": "attackMod",
-    "description": "エスパータイプの技の威力が1.2倍になる",
-    "romaji":"magattasupu-n"
-  },
-  {
-    "name": "かたいいわ", 
-    "type": "いわ", 
-    "a": 1.2,
-    "timing": "attackMod",
-    "description": "いわタイプの技の威力が1.2倍になる",
-    "romaji":"kataiiwa"
-  },
-  {
-    "name": "ぎんのこな", 
-    "type": "むし", 
-    "a": 1.2,
-    "timing": "attackMod",
-    "description": "むしタイプの技の威力が1.2倍になる",
-    "romaji":"ginnnokona"
-  },
-  {
-    "name": "のろいのおふだ", 
-    "type": "ゴースト", 
-    "a": 1.2,
-    "timing": "attackMod",
-    "description": "ゴーストタイプの技の威力が1.2倍になる",
-    "romaji":"noroinoofuda"
-  },
-  {
-    "name": "りゅうのキバ", 
-    "type": "ドラゴン", 
-    "c": 1.2,
-    "timing": "attackMod",
-    "description": "ドラゴンタイプの技の威力が1.2倍になる",
-    "romaji":"ryuunokiba"
-  },
-  {
-    "name": "メタルコート", 
-    "type": "はがね", 
-    "a": 1.2,
-    "timing": "attackMod",
-    "description": "はがねタイプの技の威力が1.2倍になる",
-    "romaji":"metaruko-to"
-  },
-  {
-    "name": "こだわりハチマキ", 
-    "a": 1.5,
-    "timing": "attackMod",
-    "description": "物理攻撃の威力が1.5倍になる",
-    "romaji":"kodawarihatimaki"
-  },
-  {
-    "name": "こころのしずく", 
-    "c": 1.5,
-    "d": 1.5,
+    "d": 1.2,
     "timing": "attackMod",
     "description": "特殊攻撃と特殊防御が1.5倍になる（ラティオス/ラティアスが持った場合）",
-    "romaji":"kokoronosizuku"
+    "romaji": "kokoronosizuku"
   },
   {
-    "name": "しんかいのキバ",
-    "c": 2.0, 
+    "name": "こだわりハチマキ",
+    "a": 1.2,
     "timing": "attackMod",
-    "description": "特殊攻撃が2.0倍になる（パールルが持った場合）",
-    "romaji":"sinkainokiba"
+    "description": "物理攻撃の威力が1.5倍になる",
+    "romaji": "kodawarihatimaki"
   },
   {
     "name": "しんかいのウロコ",
-    "d": 2.0, 
+    "d": 1.2,
     "description": "特殊防御が2.0倍になる（パールルが持った場合）",
-    "romaji":"sinkainouroko"
+    "romaji": "sinkainouroko"
+  },
+  {
+    "name": "しんかいのキバ",
+    "c": 1.2,
+    "timing": "attackMod",
+    "description": "特殊攻撃が2.0倍になる（パールルが持った場合）",
+    "romaji": "sinkainokiba"
+  },
+  {
+    "name": "しんぴのしずく",
+    "type": "みず",
+    "c": 1.2,
+    "timing": "attackMod",
+    "description": "みずタイプの技の威力が1.1倍になる",
+    "romaji": "sinpinosizuku"
+  },
+  {
+    "name": "じしゃく",
+    "type": "でんき",
+    "c": 1.2,
+    "timing": "attackMod",
+    "description": "でんきタイプの技の威力が1.1倍になる",
+    "romaji": "jisyaku"
+  },
+  {
+    "name": "するどいくちばし",
+    "type": "ひこう",
+    "a": 1.2,
+    "timing": "attackMod",
+    "description": "ひこうタイプの技の威力が1.1倍になる",
+    "romaji": "surudoikutibasi"
+  },
+  {
+    "name": "たべのこし",
+    "description": "最大HPの1/16回復する",
+    "romaji": "tabenokosi"
   },
   {
     "name": "でんきだま",
-    "a": 2.0, 
-    "c": 2.0, 
+    "a": 1.2,
+    "c": 1.2,
     "timing": "attackMod",
     "description": "攻撃と特殊攻撃が2.0倍になる（ピカチュウが持った場合）",
-    "romaji":"denkidama"
+    "romaji": "denkidama"
   },
   {
-    "name": "メタルパウダー", 
-    "b": 2.0,
-    "description": "防御が2倍になる（メタモンが持った場合）",
-    "romaji":"metarupauda-"
+    "name": "とけないこおり",
+    "type": "こおり",
+    "c": 1.2,
+    "timing": "attackMod",
+    "description": "こおりタイプの技の威力が1.1倍になる",
+    "romaji": "tokenaikoori"
   },
   {
-    "name": "ふといホネ", 
-    "a": 2.0,
+    "name": "どくバリ",
+    "type": "どく",
+    "a": 1.2,
+    "timing": "attackMod",
+    "description": "どくタイプの技の威力が1.1倍になる",
+    "romaji": "dokubari"
+  },
+  {
+    "name": "のろいのおふだ",
+    "type": "ゴースト",
+    "a": 1.2,
+    "timing": "attackMod",
+    "description": "ゴーストタイプの技の威力が1.1倍になる",
+    "romaji": "noroinoofuda"
+  },
+  {
+    "name": "ひかりのこな",
+    "description": "持たせたポケモンに対するわざの命中率が0.9倍になる",
+    "romaji": "hikarinokona"
+  },
+  {
+    "name": "ふといホネ",
+    "a": 1.2,
     "timing": "attackMod",
     "description": "物理攻撃の威力が2.0倍になる（カラカラが持った場合）",
-    "romaji":"futoihone"
+    "romaji": "futoihone"
   },
   {
-    "name": "ピントレンズ", 
+    "name": "まがったスプーン",
+    "type": "エスパー",
+    "c": 1.2,
+    "timing": "attackMod",
+    "description": "エスパータイプの技の威力が1.1倍になる",
+    "romaji": "magattasupu-n"
+  },
+  {
+    "name": "もくたん",
+    "type": "ほのお",
+    "c": 1.2,
+    "timing": "attackMod",
+    "description": "ほのおタイプの技の威力が1.1倍になる",
+    "romaji": "mokutan"
+  },
+  {
+    "name": "やわらかいすな",
+    "type": "じめん",
+    "a": 1.2,
+    "timing": "attackMod",
+    "description": "じめんタイプの技の威力が1.1倍になる",
+    "romaji": "yawarakaisuna"
+  },
+  {
+    "name": "りゅうのキバ",
+    "type": "ドラゴン",
+    "c": 1.2,
+    "timing": "attackMod",
+    "description": "ドラゴンタイプの技の威力が1.1倍になる",
+    "romaji": "ryuunokiba"
+  },
+  {
+    "name": "アップグレード",
+    "type": "ノーマル",
+    "a": 1.6,
+    "timing": "attackMod",
+    "description": "ノーマルタイプの技の威力が1.1倍になる",
+    "romaji": "sirukunosuka-fu"
+  },
+  {
+    "name": "イアのみ",
+    "description": "最大HPの1/2以下になったとき最大HPの1/8回復する",
+    "romaji": "ianomi"
+  },
+  {
+    "name": "ウイのみ",
+    "description": "最大HPの1/2以下になったとき最大HPの1/8回復する",
+    "romaji": "uinomi"
+  },
+  {
+    "name": "オボンのみ",
+    "description": "最大HPの1/2以下になったとき30回復する",
+    "romaji": "obonnnomi"
+  },
+  {
+    "name": "シルクのスカーフ",
+    "type": "ノーマル",
+    "a": 1.2,
+    "timing": "attackMod",
+    "description": "ノーマルタイプの技の威力が1.1倍になる",
+    "romaji": "sirukunosuka-fu"
+  },
+  {
+    "name": "バンジのみ",
+    "description": "最大HPの1/2以下になったとき最大HPの1/8回復する",
+    "romaji": "banzinomi"
+  },
+  {
+    "name": "ピントレンズ",
     "timing": "attackMod",
     "description": "急所に当たりやすくなる",
-    "romaji":"pintorenzu"
-  },  
-  {
-    "name": "たべのこし", 
-    "description": "最大HPの1/16回復する",
-    "romaji":"tabenokosi"
+    "romaji": "pintorenzu"
   },
   {
-    "name": "オボンのみ", 
-    "description": "最大HPの1/2以下になったとき30回復する",
-    "romaji":"obonnnomi"
-  },
-  {
-    "name": "フィラのみ", 
+    "name": "フィラのみ",
     "description": "最大HPの1/2以下になったとき最大HPの1/8回復する",
-    "romaji":"firanomi"
+    "romaji": "firanomi"
   },
   {
-    "name": "ウイのみ", 
+    "name": "マゴのみ",
     "description": "最大HPの1/2以下になったとき最大HPの1/8回復する",
-    "romaji":"uinomi"
+    "romaji": "magonomi"
   },
   {
-    "name": "マゴのみ", 
-    "description": "最大HPの1/2以下になったとき最大HPの1/8回復する",
-    "romaji":"magonomi"
+    "name": "メタルコート",
+    "type": "はがね",
+    "a": 1.2,
+    "timing": "attackMod",
+    "description": "はがねタイプの技の威力が1.1倍になる",
+    "romaji": "metaruko-to"
   },
   {
-    "name": "バンジのみ", 
-    "description": "最大HPの1/2以下になったとき最大HPの1/8回復する",
-    "romaji":"banzinomi"
-  },
-  {
-    "name": "イアのみ", 
-    "description": "最大HPの1/2以下になったとき最大HPの1/8回復する",
-    "romaji":"ianomi"
-  },
-  {
-    "name": "ひかりのこな", 
-    "description": "持たせたポケモンに対するわざの命中率が0.9倍になる",
-    "romaji":"hikarinokona"
+    "name": "メタルパウダー",
+    "b": 1.2,
+    "description": "防御が2倍になる（メタモンが持った場合）",
+    "romaji": "metarupauda-"
   }
 ]
