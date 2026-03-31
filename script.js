@@ -5616,6 +5616,13 @@ function calculateDamage(attack, defense, level, power, category, moveType, atta
   if (currentMove && currentMove.class === "b_harf") {
     finalDefense = Math.floor(finalDefense / 2);
   }
+
+  // すなあらし 岩タイプの特防2.25倍（特殊技のみ）
+  const weather = document.getElementById('weatherSelect').value;
+  if (weather === 'sandstorm' && category === 'Special' && defenderTypes.includes('いわ')) {
+    finalDefense = Math.floor(finalDefense * 3 / 2);
+    finalDefense = Math.floor(finalDefense * 3 / 2);
+  }
   
   // ランク補正
   const atkRankMultiplier = getRankMultiplier(atkRank);
@@ -5656,7 +5663,6 @@ function calculateDamage(attack, defense, level, power, category, moveType, atta
   }
    
   // 天候補正
-  const weather = document.getElementById('weatherSelect').value;
   if (weather === 'rain' && moveType === 'みず') {
    // あめがふりつづいている 水1.5倍
    proc = Math.floor(proc * 3 / 2);
