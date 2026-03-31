@@ -2473,7 +2473,7 @@ function selectMove(moveName) {
     if (currentMove && currentMove.class === 'awaken_power') {
         const newType = calculateHiddenPowerType();
         currentMove.type = newType;
-        currentMove.category = getGen3CategoryByType(newType);
+        currentMove.category = 'Special';
     }
     // ウェザーボールの場合、天候に応じてタイプと分類を更新
     if (currentMove && currentMove.class === 'weather_ball') {
@@ -2808,7 +2808,7 @@ function selectMultiTurnMove(turn, moveName) {
             multiTurnMoves[turn] = { 
                 ...move, 
                 type: newType,
-                category: getGen3CategoryByType(newType)
+                category: 'Special'
             };
         }
         // ウェザーボールの場合、天候に応じてタイプと分類を更新
@@ -5335,7 +5335,7 @@ function updateHiddenPowerIfNeeded() {
         const newPower = calculateHiddenPowerBP();
         
         currentMove.type = newType;
-        currentMove.category = getGen3CategoryByType(newType);
+        currentMove.category = 'Special';
         currentMove.power = newPower;
     }
     
@@ -5346,8 +5346,8 @@ function updateHiddenPowerIfNeeded() {
             const newPower = calculateHiddenPowerBP();
             
             multiTurnMoves[i].type = newType;
-            multiTurnMoves[i].category = getGen3CategoryByType(newType);
-            multiTurnMoves[i].power = newPower;  // ← この行を追加
+            multiTurnMoves[i].category = 'Special';
+            multiTurnMoves[i].power = newPower;
         }
     }
 }
