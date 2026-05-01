@@ -2,6 +2,7 @@
   {
     "name": "うしおのおこう",
     "type": "みず",
+    "a": 1.2,
     "c": 1.2,
     "timing": "attackMod",
     "description": "みずタイプの技の威力が1.1倍になる",
@@ -11,6 +12,7 @@
     "name": "かたいいわ",
     "type": "いわ",
     "a": 1.2,
+    "c": 1.2,
     "timing": "attackMod",
     "description": "いわタイプの技の威力が1.1倍になる",
     "romaji": "kataiiwa"
@@ -18,6 +20,7 @@
   {
     "name": "きせきのたね",
     "type": "くさ",
+    "a": 1.2,
     "c": 1.2,
     "timing": "attackMod",
     "description": "くさタイプの技の威力が1.1倍になる",
@@ -27,6 +30,7 @@
     "name": "ぎんのこな",
     "type": "むし",
     "a": 1.2,
+    "c": 1.2,
     "timing": "attackMod",
     "description": "むしタイプの技の威力が1.1倍になる",
     "romaji": "ginnnokona"
@@ -35,6 +39,7 @@
     "name": "くろいメガネ",
     "type": "あく",
     "a": 1.2,
+    "c": 1.2,
     "timing": "attackMod",
     "description": "あくタイプの技の威力が1.1倍になる",
     "romaji": "kuroimegane"
@@ -43,6 +48,7 @@
     "name": "くろおび",
     "type": "かくとう",
     "a": 1.2,
+    "c": 1.2,
     "timing": "attackMod",
     "description": "かくとうタイプの技の威力が1.1倍になる",
     "romaji": "kuroobi"
@@ -57,7 +63,7 @@
   },
   {
     "name": "こだわりハチマキ",
-    "a": 1.2,
+    "a": 1.5,
     "timing": "attackMod",
     "description": "物理攻撃の威力が1.5倍になる",
     "romaji": "kodawarihatimaki"
@@ -78,6 +84,7 @@
   {
     "name": "しんぴのしずく",
     "type": "みず",
+    "a": 1.2,
     "c": 1.2,
     "timing": "attackMod",
     "description": "みずタイプの技の威力が1.1倍になる",
@@ -86,6 +93,7 @@
   {
     "name": "じしゃく",
     "type": "でんき",
+    "a": 1.2,
     "c": 1.2,
     "timing": "attackMod",
     "description": "でんきタイプの技の威力が1.1倍になる",
@@ -95,6 +103,7 @@
     "name": "するどいくちばし",
     "type": "ひこう",
     "a": 1.2,
+    "c": 1.2,
     "timing": "attackMod",
     "description": "ひこうタイプの技の威力が1.1倍になる",
     "romaji": "surudoikutibasi"
@@ -115,6 +124,7 @@
   {
     "name": "とけないこおり",
     "type": "こおり",
+    "a": 1.2,
     "c": 1.2,
     "timing": "attackMod",
     "description": "こおりタイプの技の威力が1.1倍になる",
@@ -124,6 +134,7 @@
     "name": "どくバリ",
     "type": "どく",
     "a": 1.2,
+    "c": 1.2,
     "timing": "attackMod",
     "description": "どくタイプの技の威力が1.1倍になる",
     "romaji": "dokubari"
@@ -132,6 +143,7 @@
     "name": "のろいのおふだ",
     "type": "ゴースト",
     "a": 1.2,
+    "c": 1.2,
     "timing": "attackMod",
     "description": "ゴーストタイプの技の威力が1.1倍になる",
     "romaji": "noroinoofuda"
@@ -151,6 +163,7 @@
   {
     "name": "まがったスプーン",
     "type": "エスパー",
+    "a": 1.2,
     "c": 1.2,
     "timing": "attackMod",
     "description": "エスパータイプの技の威力が1.1倍になる",
@@ -159,6 +172,7 @@
   {
     "name": "もくたん",
     "type": "ほのお",
+    "a": 1.2,
     "c": 1.2,
     "timing": "attackMod",
     "description": "ほのおタイプの技の威力が1.1倍になる",
@@ -168,6 +182,7 @@
     "name": "やわらかいすな",
     "type": "じめん",
     "a": 1.2,
+    "c": 1.2,
     "timing": "attackMod",
     "description": "じめんタイプの技の威力が1.1倍になる",
     "romaji": "yawarakaisuna"
@@ -175,6 +190,7 @@
   {
     "name": "りゅうのキバ",
     "type": "ドラゴン",
+    "a": 1.2,
     "c": 1.2,
     "timing": "attackMod",
     "description": "ドラゴンタイプの技の威力が1.1倍になる",
@@ -183,7 +199,8 @@
   {
     "name": "アップグレード",
     "type": "ノーマル",
-    "a": 1.6,
+    "a": 1.2,
+    "c": 1.2,
     "timing": "attackMod",
     "description": "ノーマルタイプの技の威力が1.1倍になる",
     "romaji": "sirukunosuka-fu"
@@ -207,6 +224,7 @@
     "name": "シルクのスカーフ",
     "type": "ノーマル",
     "a": 1.2,
+    "c": 1.2,
     "timing": "attackMod",
     "description": "ノーマルタイプの技の威力が1.1倍になる",
     "romaji": "sirukunosuka-fu"
@@ -236,6 +254,7 @@
     "name": "メタルコート",
     "type": "はがね",
     "a": 1.2,
+    "c": 1.2,
     "timing": "attackMod",
     "description": "はがねタイプの技の威力が1.1倍になる",
     "romaji": "metaruko-to"
